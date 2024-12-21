@@ -1,0 +1,35 @@
+<IfModule mod_rewrite.c>
+# RewriteEngine On
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^([^\.]+)$ $1.php [NC,L]
+# RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# RewriteEngine on
+
+# RewriteRule ^/ordenes/index$           index.php
+# RewriteRule ^/ordenes/ordenes_add$     ordenes_add.php
+# RewriteRule ^/ordenes/ordenes_ok.$     ordenes_ok..php
+# RewriteRule ^/ordenes/ordenes_close$   ordenes_close.php
+RewriteEngine On
+
+# Asegurarse de que los archivos y directorios existentes no sean reescritos
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Reescribir todas las solicitudes a index.php
+RewriteRule ^ index.php [L]
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Opcional: Si necesitas manejar archivos específicos
+RewriteRule ^ordenes_add$ ordenes_add.php [L]
+RewriteRule ^ordenes_ok$ ordenes_ok.php [L]
+RewriteRule ^ordenes_close$ ordenes_close.php [L]
+
+</IfModule>
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php73” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php73 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

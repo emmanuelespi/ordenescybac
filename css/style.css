@@ -1,0 +1,38 @@
+/* CSS Document */
+#hd{
+	min-width:972px;
+	background-color:#FFF;
+}
+
+#hd #logo{
+	margin-top:5px;
+	padding:10px;
+}
+
+#hd #logo li{
+	margin-right:50px;
+}
+
+#hd #social{
+	padding:10px;
+}
+
+#hd #social li{
+	padding:5px;
+}
+
+#hd .menu{
+	background-color:#E00408;
+}
+
+.bg-blue-cybac {
+	background-color: #092B51;
+}
+
+.footer-cybac {
+	padding: 80px 35px 50px;
+}
+
+.btn-social {
+	color: #FFF;
+}
